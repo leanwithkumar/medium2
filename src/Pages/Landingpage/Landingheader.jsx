@@ -48,7 +48,7 @@ function Landingheader() {
           <Link to={'/membership'}><div className="px-2  hover:underline cursor-pointer">Membership</div></Link> 
           <Link to={'/write'}><div className="px-2  hover:underline cursor-pointer">Write</div></Link>
           <Link to={'/signin'}><div className="px-2  hover:underline cursor-pointer">Signin</div></Link>
-          <Link to={'getstarted/>'}><div className="px-2  hover:underline cursor-pointer">Get started</div></Link>
+          <Link to={'/getstarted'}><div className="px-2  hover:underline cursor-pointer">Get started</div></Link>
           
         </div>
       )}
