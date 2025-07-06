@@ -3,15 +3,12 @@ import './index.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import { RecoilRoot } from 'recoil'
-import AuthProvider from './store/Authprovider.jsx'
 
 createRoot(document.getElementById('root')).render(
   <RecoilRoot>
-  <AuthProvider>
   <BrowserRouter>
   <App />
   </BrowserRouter>
-  </AuthProvider>
   </RecoilRoot>
   
     

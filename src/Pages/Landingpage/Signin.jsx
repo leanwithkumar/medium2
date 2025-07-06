@@ -37,26 +37,29 @@ function Signin() {
 
     try {
   console.log("Sending signin request...");
+
+
   const response = await axios.post("http://localhost:5000/signin", {
-    email,
-    password
-  });
+  email,
+  password
+}, {
+  withCredentials: true  
+});
 
   console.log("Response received:", response);
 
-  localStorage.setItem("medium2token", response.data.token);
-  toast.success(response.data.message, { /* toast config */ });
+  toast.success(response.data.message, );
 
-  setEmail("");
-  setPassword("");
+  //setEmail("");
+ // setPassword("");
   console.log("Redirecting to /home");
   setTimeout(() => {
-    navigate('/home');
+    navigate('/medium2');
   }, 2000);
 
 } catch (err) {
   console.log("Error caught in catch block:");
-  console.log(err); // 👈 show full error
+  console.log(err); 
   console.log("Error.response:", err.response);
 
   const errorMessage =
