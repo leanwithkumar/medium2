@@ -8,7 +8,6 @@ import Landingherosec from './Pages/Landingpage/Landingherosec'
 import Write from './Pages/Landingpage/Write'
 import Homepage from './Pages/Loginpages/Homepage'
 import Protected from './utils/Provider'
-import Allblogs from './Pages/Loginpages/Allblogs'
 import Profilepage from './Pages/Loginpages/Profilepage'
 import Publish from './Pages/Loginpages/Publish'
 import Readvlog from './Pages/Loginpages/Readvlog'
@@ -35,7 +34,6 @@ function App() {
     <Route element={<Protected/>}>
     <Route path='/medium2' element={<Homepage/>}>
     <Route index element={<Trending/>}/>
-    <Route path='allblogs' element={<Allblogs/>}/>
     <Route path='profile'  element={<Profilepage/>}/>
     <Route path='readvlog/:blogId' element={<Readvlog/>}/>
     <Route path="search" element={<Searchresults/>} />
