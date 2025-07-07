@@ -13,7 +13,7 @@ import Profilepage from './Pages/Loginpages/Profilepage'
 import Publish from './Pages/Loginpages/Publish'
 import Readvlog from './Pages/Loginpages/Readvlog'
 import Trending from './Pages/Loginpages/Trending'
-import SearchResults from './Pages/Loginpages/Searchresults'
+import SearchResults from './Pages/Loginpages/SearchResults'
 import EditBlog from './Pages/Loginpages/EditBlog'
 
 
