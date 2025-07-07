@@ -13,7 +13,7 @@ import Publish from './Pages/Loginpages/Publish'
 import Readvlog from './Pages/Loginpages/Readvlog'
 import Trending from './Pages/Loginpages/Trending'
 import EditBlog from './Pages/Loginpages/EditBlog'
-import Searchresults from './Pages/Loginpages/Searchresults';
+import Searchingtags from './Pages/Loginpages/Searchingtags'
 
 
 function App() {
@@ -35,7 +35,7 @@ function App() {
     <Route index element={<Trending/>}/>
     <Route path='profile'  element={<Profilepage/>}/>
     <Route path='readvlog/:blogId' element={<Readvlog/>}/>
-    <Route path="search" element={<Searchresults/>} />
+    <Route path="search" element={<Searchingtags/>} />
     <Route path='editblog/:blogId' element={<EditBlog />} />
     </Route>
     
