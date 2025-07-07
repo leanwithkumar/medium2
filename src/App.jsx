@@ -13,8 +13,7 @@ import Publish from './Pages/Loginpages/Publish'
 import Readvlog from './Pages/Loginpages/Readvlog'
 import Trending from './Pages/Loginpages/Trending'
 import EditBlog from './Pages/Loginpages/EditBlog'
-import Searchresults from './Pages/Loginpages/Searchresults'
-
+import Searchresults from './Pages/Loginpages/Searchresults';
 
 
 function App() {
