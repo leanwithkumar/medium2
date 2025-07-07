@@ -2,12 +2,16 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Bounce, ToastContainer, toast } from 'react-toastify';
+import { useSetRecoilState } from 'recoil';
+import userAtom from '../../store/userAtom';
 
 
 function Signin() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate()
+  const setUser = useSetRecoilState(userAtom);
+
 
   const signinuser= async(e)=>{
     e.preventDefault();
@@ -50,9 +54,19 @@ function Signin() {
 
   toast.success(response.data.message, );
 
-  //setEmail("");
- // setPassword("");
+  setEmail("");
+  setPassword("");
   console.log("Redirecting to /home");
+
+  const userData = {
+  userName: response.data.username,
+  userEmail: response.data.email,
+  userId: response.data.userId,
+};
+setUser(userData);
+localStorage.setItem("user", JSON.stringify(userData));
+ 
+
   setTimeout(() => {
     navigate('/medium2');
   }, 2000);

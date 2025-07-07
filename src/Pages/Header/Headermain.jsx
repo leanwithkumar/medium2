@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { useState, useRef, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useSetRecoilState } from 'recoil';
+import userAtom from '../../store/userAtom';
 
 function Headermain() {
   const [isOpen, setIsOpen] = useState(false);         
@@ -8,6 +10,7 @@ function Headermain() {
   const [searchitem, setSearchitem] = useState("");
   const navigate = useNavigate();
   const profileRef = useRef(null);
+     const setUser = useSetRecoilState(userAtom);
 
   const logoutuser = async () => {
     try {
@@ -15,11 +18,27 @@ function Headermain() {
         withCredentials: true
       });
       localStorage.removeItem("medium2token");
+   
+setUser({
+  userName: "",
+  userEmail: "",
+  userId: ""
+});
+localStorage.removeItem("user"); 
+setUser({ userName: "", userEmail: "", userId: "" });
       navigate('/signin');
     } catch (err) {
       console.log("unable to logout", err.message);
     }
   };
+
+
+  const handleSearch = (e) => {
+  if (e.key === 'Enter' && searchitem.trim()) {
+    navigate(`search?query=${encodeURIComponent(searchitem.trim())}`);
+    setSearchitem('');
+  }
+};
 
   
   useEffect(() => {
@@ -52,12 +71,13 @@ function Headermain() {
             <div className="pt-4 px-10  pb-5">
               <div className="border border-black rounded-3xl w-full md:w-[250px] h-10 flex items-center">
                 <input
-                  type="text"
-                  value={searchitem}
-                  onChange={(e) => setSearchitem(e.target.value)}
-                  placeholder="search "
-                  className="w-full px-5 py-2 bg-transparent focus:outline-none"
-                />
+  type="text"
+  value={searchitem}
+  onChange={(e) => setSearchitem(e.target.value)}
+  onKeyDown={handleSearch}
+  placeholder="Search"
+  className="w-full px-5 py-2 bg-transparent focus:outline-none"
+/>
               </div>
             </div>
           </div>
@@ -85,10 +105,7 @@ function Headermain() {
                   <Link to="profile" onClick={() => setDropdownOpen(false)}>
                     <li className="px-4 py-2 border-b hover:bg-gray-100 cursor-pointer">Profile</li>
                   </Link>
-                   <Link to="publish" onClick={() => setDropdownOpen(false)}>
-                    <li className="px-4 py-2 border-b hover:bg-gray-100 cursor-pointer">My Work</li>
-                  </Link>
-                  <Link to="publish" onClick={() => setDropdownOpen(false)}>
+                  <Link to="/publish" onClick={() => setDropdownOpen(false)}>
                     <li className="px-4 py-2 border-b hover:bg-gray-100 cursor-pointer">Puslish</li>
                   </Link>
                   <li
@@ -106,7 +123,6 @@ function Headermain() {
           </div>
         </div>
 
-        {/* Mobile menu toggle */}
         <div className="md:hidden pb-2 pr-10">
           <button
             className="text-3xl font-bold"
@@ -117,15 +133,17 @@ function Headermain() {
         </div>
       </div>
 
-      {/* Mobile menu */}
+      
       {isOpen && (
         <div className="md:hidden flex flex-col gap-3 px-10 pb-4 text-base sm:text-lg">
           <Link to='profile' onClick={() => setIsOpen(false)}>
             <div className="px-2 hover:underline cursor-pointer">Profile</div>
           </Link>
-          <Link to='publish' onClick={() => setIsOpen(false)}>
+          <Link to='/publish' onClick={() => setIsOpen(false)}>
             <div className="px-2 hover:underline cursor-pointer">Publish</div>
           </Link>
+          <div className="px-2 hover:bg-red-100 text-red-600 cursor-pointer">Log Out</div>
+
           
         </div>
       )}

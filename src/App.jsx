@@ -11,7 +11,10 @@ import Protected from './utils/Provider'
 import Allblogs from './Pages/Loginpages/Allblogs'
 import Profilepage from './Pages/Loginpages/Profilepage'
 import Publish from './Pages/Loginpages/Publish'
-import Mywork from './Pages/Loginpages/Mywork'
+import Readvlog from './Pages/Loginpages/Readvlog'
+import Trending from './Pages/Loginpages/Trending'
+import SearchResults from './Pages/Loginpages/Searchresults'
+import EditBlog from './Pages/Loginpages/EditBlog'
 
 
 
@@ -31,10 +34,12 @@ function App() {
  
     <Route element={<Protected/>}>
     <Route path='/medium2' element={<Homepage/>}>
-   
+    <Route index element={<Trending/>}/>
     <Route path='allblogs' element={<Allblogs/>}/>
-    <Route path='mywork' element={<Mywork/>}/>
     <Route path='profile'  element={<Profilepage/>}/>
+    <Route path='readvlog/:blogId' element={<Readvlog/>}/>
+    <Route path="search" element={<SearchResults />} />
+    <Route path='editblog/:blogId' element={<EditBlog />} />
     </Route>
     
     </Route>
