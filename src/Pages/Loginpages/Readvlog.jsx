@@ -9,7 +9,7 @@ function Readvlog() {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/readblog/${blogId}`);
+        const res = await axios.get(`https://medium2backend-1.onrender.com/${blogId}`);
         setBlog(res.data);
       } catch (err) {
         console.error("Failed to fetch blog", err);
@@ -31,7 +31,6 @@ function Readvlog() {
         {new Date(blog.createdAt).toLocaleString()}
       </div>
 
-      {/* ✅ Render Tags */}
       {blog.tags?.length > 0 && (
         <div className="flex flex-wrap gap-2 mt-4">
           {blog.tags.map((tag, index) => (

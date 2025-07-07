@@ -43,7 +43,7 @@ function Signin() {
   console.log("Sending signin request...");
 
 
-  const response = await axios.post("http://localhost:5000/signin", {
+  const response = await axios.post("https://medium2backend-1.onrender.com/signin", {
   email,
   password
 }, {
@@ -81,7 +81,7 @@ localStorage.setItem("user", JSON.stringify(userData));
     err.response?.data?.errors?.[0] ||
     'Signin failed';
 
-  toast.error(errorMessage, { /* toast config */ });
+  toast.error(errorMessage);
 }
 
     

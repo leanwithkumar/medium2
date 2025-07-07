@@ -10,7 +10,7 @@ function Trending() {
 
   const fetchBlogs = async (pageNumber) => {
     try {
-      const res = await axios.get(`http://localhost:5000/trendingvlogs?page=${pageNumber}`);
+      const res = await axios.get(`https://medium2backend-1.onrender.com/trendingvlogs?page=${pageNumber}`);
       if (res.data.length === 0) {
         setHasMore(false);
       } else {

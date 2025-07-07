@@ -13,8 +13,8 @@ import Profilepage from './Pages/Loginpages/Profilepage'
 import Publish from './Pages/Loginpages/Publish'
 import Readvlog from './Pages/Loginpages/Readvlog'
 import Trending from './Pages/Loginpages/Trending'
-import SearchResults from './Pages/Loginpages/SearchResults'
 import EditBlog from './Pages/Loginpages/EditBlog'
+import Searchresults from './Pages/Loginpages/Searchresults'
 
 
 
@@ -38,7 +38,7 @@ function App() {
     <Route path='allblogs' element={<Allblogs/>}/>
     <Route path='profile'  element={<Profilepage/>}/>
     <Route path='readvlog/:blogId' element={<Readvlog/>}/>
-    <Route path="search" element={<SearchResults />} />
+    <Route path="search" element={<Searchresults/>} />
     <Route path='editblog/:blogId' element={<EditBlog />} />
     </Route>
     

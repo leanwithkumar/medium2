@@ -11,7 +11,7 @@ const Protected = () => {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/verify", {
+        const res = await axios.get("https://medium2backend-1.onrender.com/verify", {
           withCredentials: true,
         });
 

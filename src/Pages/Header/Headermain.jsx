@@ -14,7 +14,7 @@ function Headermain() {
 
   const logoutuser = async () => {
     try {
-      await axios.get('http://localhost:5000/logout', {
+      await axios.get('https://medium2backend-1.onrender.com/logout', {
         withCredentials: true
       });
       localStorage.removeItem("medium2token");

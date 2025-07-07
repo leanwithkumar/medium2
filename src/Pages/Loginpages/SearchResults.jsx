@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import axios from 'axios';
 
-function SearchResults() {
+function Searchresults() {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(true);
   const location = useLocation();
@@ -12,7 +12,7 @@ function SearchResults() {
   useEffect(() => {
     const fetchResults = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/searchblogs?query=${query}`);
+        const res = await axios.get(`https://medium2backend-1.onrender.com/searchblogs?query=${query}`);
         setResults(res.data);
       } catch (err) {
         console.error("Search failed", err);
@@ -53,4 +53,4 @@ function SearchResults() {
   );
 }
 
-export default SearchResults;
+export default Searchresults;
