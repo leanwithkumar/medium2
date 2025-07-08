@@ -13,7 +13,7 @@ function Profilepage() {
   useEffect(() => {
     const fetchUserBlogs = async () => {
       try {
-        const result = await axios.get(`https://medium2backend-1.onrender.com/${user.userId}`, {
+        const result = await axios.get(`https://medium2backend.onrender.com/${user.userId}`, {
           withCredentials: true,
         });
         setBlogs(result.data);
@@ -64,7 +64,7 @@ function Profilepage() {
 
   const deleteBlog = async (blogId) => {
     try {
-      await axios.delete(`http://localhost:5000/deleteblog/${blogId}`, {
+      await axios.delete(`https://medium2backend.onrender.com/deleteblog/${blogId}`, {
         withCredentials: true,
       });
       setBlogs(blogs.filter((blog) => blog._id !== blogId));

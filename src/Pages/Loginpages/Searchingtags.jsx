@@ -12,7 +12,7 @@ function Searchingtags() {
   useEffect(() => {
     const fetchResults = async () => {
       try {
-        const res = await axios.get(`https://medium2backend-1.onrender.com/searchblogs?query=${query}`);
+        const res = await axios.get(`https://medium2backend.onrender.com/searchblogs?query=${query}`);
         setResults(res.data);
       } catch (err) {
         console.error("Search failed", err);
