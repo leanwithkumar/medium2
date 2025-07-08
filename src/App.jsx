@@ -1,7 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import Landingpage from './Pages/Landingpage/Landingpage'
 import Ourstory from './Pages/Landingpage/Ourstory'
-import Membership from './Pages/Landingpage/Membership'
 import Getstarted from './Pages/Landingpage/Getstarted'
 import Signin from './Pages/Landingpage/Signin'
 import Landingherosec from './Pages/Landingpage/Landingherosec'
@@ -14,6 +13,11 @@ import Readvlog from './Pages/Loginpages/Readvlog'
 import Trending from './Pages/Loginpages/Trending'
 import EditBlog from './Pages/Loginpages/EditBlog'
 import Searchingtags from './Pages/Loginpages/Searchingtags'
+import Help from './Pages/Landingpage/Help'
+import Privacy from './Pages/Landingpage/Privacy'
+import Rules from './Pages/Landingpage/Rules'
+import Terms from './Pages/Landingpage/Terms'
+import Contact from './Pages/Landingpage/Contact'
 
 
 function App() {
@@ -23,10 +27,14 @@ function App() {
     <Route path='/' element={<Landingpage/>}>
     <Route index element={<Landingherosec/>}/>
     <Route path='ourstroy' element={<Ourstory />} />
-    <Route path='membership' element={<Membership />} />
     <Route path='write' element={<Write/>} />
     <Route path='signin' element={<Signin />} />
     <Route path='getstarted' element={<Getstarted />} />
+    <Route path='help' element={<Help/>}/>
+    <Route path='privacy' element={<Privacy/>}/>
+    <Route path='rules' element={<Rules/>}/>
+    <Route path='terms' element={<Terms/>}/>
+    <Route path='contact' element={<Contact/>}/>
     </Route>
 
  

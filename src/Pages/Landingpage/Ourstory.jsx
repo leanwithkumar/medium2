@@ -4,7 +4,7 @@ function Ourstory() {
   return (
     <>
  
-    <div className=' md:h-screen mx-20'>
+    <div className='h-screen mx-20'>
         <div className='md:mx-60 md:py-20'>
         <div>
             <div className="text-xl md:text-5xl font-mono text-gray-800 break-words text-left md:text-left py-10">

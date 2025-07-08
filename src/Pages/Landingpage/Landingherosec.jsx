@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function Landingherosec() {
   return (
     <>
-    <div className=" md:h-screen py-10">
+    <div className="h-screen px-10 pt-5">
     <div className="flex flex-col md:flex-row items-center justify-center gap-8">
     
     

@@ -24,7 +24,6 @@ function Landingheader() {
         
         <div className="hidden md:flex flex-wrap justify-center gap-4 p-2 text-base sm:text-lg md:text-xl">
          <Link to={'/ourstroy'}><div className="px-2  hover:underline cursor-pointer">Our Story</div></Link> 
-         <Link to={'/membership'}><div className="px-2  hover:underline cursor-pointer">Membership</div></Link> 
           <Link to={'/write'}><div className="px-2  hover:underline cursor-pointer">Write</div></Link>
           <Link to={'/signin'}><div className="px-2  hover:underline cursor-pointer">Signin</div></Link>
           <Link to={'/getstarted'}><div className="px-2  hover:underline cursor-pointer">Get started</div></Link>
@@ -45,7 +44,6 @@ function Landingheader() {
       {isOpen && (
         <div className="md:hidden flex flex-col gap-3 px-10 pb-4 text-base sm:text-lg">
           <Link to={'/ourstroy'}><div className="px-2  hover:underline cursor-pointer">Our Story</div></Link> 
-          <Link to={'/membership'}><div className="px-2  hover:underline cursor-pointer">Membership</div></Link> 
           <Link to={'/write'}><div className="px-2  hover:underline cursor-pointer">Write</div></Link>
           <Link to={'/signin'}><div className="px-2  hover:underline cursor-pointer">Signin</div></Link>
           <Link to={'/getstarted'}><div className="px-2  hover:underline cursor-pointer">Get started</div></Link>
