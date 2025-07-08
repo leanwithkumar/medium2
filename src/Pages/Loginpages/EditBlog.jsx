@@ -18,7 +18,7 @@ function EditBlog() {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const res = await axios.get(`https://medium2backend.onrender.com/${blogId}`);
+        const res = await axios.get(`https://medium2backend.onrender.com/blog/${blogId}`);
         const blog = res.data;
         setTitle(blog.title);
         setContent(blog.content);
@@ -36,7 +36,7 @@ function EditBlog() {
         return toast('All fields are required');
       }
 
-      await axios.put(`https://medium2backend.onrender.com/${blogId}`, {
+      await axios.put(`https://medium2backend.onrender.com/updateblog/${blogId}`, {
         title,
         content,
         tags,
