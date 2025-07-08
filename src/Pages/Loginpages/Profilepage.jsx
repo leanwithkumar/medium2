@@ -13,7 +13,7 @@ function Profilepage() {
   useEffect(() => {
     const fetchUserBlogs = async () => {
       try {
-        const result = await axios.get(`https://medium2backend.onrender.com/${user.userId}`, {
+        const result = await axios.get(`https://medium2backend.onrender.com/usersblogs/${user.userId}`, {
           withCredentials: true,
         });
         setBlogs(result.data);

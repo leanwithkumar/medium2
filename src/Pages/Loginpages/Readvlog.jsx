@@ -9,7 +9,7 @@ function Readvlog() {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const res = await axios.get(`https://medium2backend.onrender.com/${blogId}`);
+        const res = await axios.get(`https://medium2backend.onrender.com/readblog/${blogId}`);
         setBlog(res.data);
       } catch (err) {
         console.error("Failed to fetch blog", err);
