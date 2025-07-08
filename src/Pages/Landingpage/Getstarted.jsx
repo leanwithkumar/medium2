@@ -35,7 +35,7 @@ function Getstarted() {
     });
 
     try {
-      const response = await axios.post('https://medium2backend-1.onrender.com/signup', {
+      const response = await axios.post('https://medium2backend.onrender.com/signup', {
         email,
         username,
         password,
