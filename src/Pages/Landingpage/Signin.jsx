@@ -43,7 +43,7 @@ function Signin() {
   console.log("Sending signin request...");
 
 
-  const response = await axios.post("https://medium2backend-1.onrender.com/signin", {
+  const response = await axios.post("https://medium2backend.onrender.com/signin", {
   email,
   password
 }, {
