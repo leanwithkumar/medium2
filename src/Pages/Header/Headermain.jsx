@@ -142,9 +142,12 @@ setUser({ userName: "", userEmail: "", userId: "" });
           <Link to='/publish' onClick={() => setIsOpen(false)}>
             <div className="px-2 hover:underline cursor-pointer">Publish</div>
           </Link>
-          <button>
-          <div className="px-2 hover:bg-red-100 text-red-600 cursor-pointer">Log Out</div>
-          </button>
+          
+          <div onClick={() => {
+                      setDropdownOpen(false);
+                      logoutuser();
+          }} className="px-2 hover:bg-red-100 text-red-600 cursor-pointer">Log Out</div>
+          
 
           
         </div>

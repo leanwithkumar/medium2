@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function Landingherosec() {
   return (
     <>
-    <div className="h-screen px-10 pt-5">
+    <div className="h-screen md:px-10 px-5 pt-5">
     <div className="flex flex-col md:flex-row items-center justify-center gap-8">
     
     
@@ -27,7 +27,7 @@ function Landingherosec() {
       <br/>
       <p className="text-xl md:text-2xl font-mono text-gray-800 break-words text-left md:text-left">
       read, write and understand things better
-      </p>
+      </p><br/>
       <p className="text-xl hover:underline md:text-xl font-mono text-gray-800 break-words text-left md:text-left">
         <Link to='/getstarted'>click here and get stared</Link>
       </p>
