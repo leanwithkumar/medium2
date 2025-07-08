@@ -22,7 +22,7 @@ function Publish() {
         return toast.alert('All fields are required');
       }
 
-      const posted = await axios.post('https://medium2backend-1.onrender.com/addblog', {
+      const posted = await axios.post('https://medium2backend.onrender.com/addblog', {
         title,
         content,
         author: user.userId,
